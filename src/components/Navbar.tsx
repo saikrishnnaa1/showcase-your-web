@@ -41,7 +41,7 @@ const Navbar = () => {
       <div className="container-custom flex items-center justify-between h-16">
         <div className="flex items-center">
           <a href="#home" className="text-2xl font-bold text-navy-800">
-            Portfolio<span className="text-primary">.</span>
+            Saikrishna<span className="text-primary">.</span>
           </a>
         </div>
 
@@ -57,7 +57,9 @@ const Navbar = () => {
               {link.name}
             </a>
           ))}
-          <Button className="ml-4">Resume</Button>
+          <Button className="ml-4" asChild>
+            <a href="#" target="_blank" rel="noopener noreferrer">Resume</a>
+          </Button>
         </div>
 
         {/* Mobile Navigation Toggle */}
@@ -87,7 +89,9 @@ const Navbar = () => {
                 {link.name}
               </a>
             ))}
-            <Button className="mt-4 w-full">Resume</Button>
+            <Button className="mt-4 w-full" asChild>
+              <a href="#" target="_blank" rel="noopener noreferrer">Resume</a>
+            </Button>
           </div>
         </div>
       )}

@@ -11,75 +11,95 @@ interface Project {
   description: string;
   image: string;
   tags: string[];
-  category: "web" | "design" | "other";
+  category: "web" | "ai" | "other";
   demoUrl: string;
   sourceUrl: string;
 }
 
 const ProjectsSection = () => {
-  const [category, setCategory] = useState<"all" | "web" | "design" | "other">("all");
+  const [category, setCategory] = useState<"all" | "web" | "ai" | "other">("all");
 
   const projects: Project[] = [
     {
       id: 1,
-      title: "Portfolio Website",
-      description: "A responsive portfolio website built with React and Tailwind CSS to showcase my projects and skills.",
+      title: "Resume Builder",
+      description: "A web application allowing users to create their resume in real time. Used Firebase Authentication (SDK) and Cloud Firestore to store data.",
       image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&w=600&h=400",
-      tags: ["React", "Tailwind CSS", "Responsive"],
+      tags: ["Firebase", "Bootstrap", "HTML", "CSS", "JavaScript"],
       category: "web",
       demoUrl: "#",
       sourceUrl: "#",
     },
     {
       id: 2,
-      title: "E-commerce Dashboard",
-      description: "An admin dashboard for an e-commerce site with analytics, product management, and order tracking.",
+      title: "Portfolio Website",
+      description: "A personal portfolio website showcasing projects and skills, created during the web development internship at Vault of Codes.",
       image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=600&h=400",
-      tags: ["React", "Chart.js", "UI/UX"],
+      tags: ["HTML", "CSS", "JavaScript", "Responsive Design"],
       category: "web",
       demoUrl: "#",
       sourceUrl: "#",
     },
     {
       id: 3,
-      title: "Travel App UI Design",
-      description: "A modern mobile UI design for a travel booking application with interactive prototypes.",
+      title: "Fruit Disease Detection",
+      description: "A deep learning-based system for detecting fruit diseases using image processing techniques and neural networks.",
       image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&h=400",
-      tags: ["Figma", "UI Design", "Prototyping"],
-      category: "design",
+      tags: ["Python", "TensorFlow", "OpenCV", "Keras", "ANN"],
+      category: "ai",
       demoUrl: "#",
       sourceUrl: "#",
     },
     {
       id: 4,
-      title: "Recipe Finder",
-      description: "A web application that helps users find recipes based on ingredients they have.",
+      title: "Language Translator",
+      description: "A language translator project for accessibility, allowing users to translate text between different languages.",
       image: "https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=600&h=400", 
-      tags: ["JavaScript", "API Integration", "CSS Grid"],
-      category: "web",
+      tags: ["Python", "NLP", "Machine Learning", "UI Design"],
+      category: "ai",
       demoUrl: "#",
       sourceUrl: "#",
     },
     {
       id: 5,
-      title: "Weather Dashboard",
-      description: "A weather application showing current conditions and forecasts using a third-party API.",
+      title: "Video Downloader",
+      description: "An application for downloading videos from various platforms, supporting different quality options and formats.",
       image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=600&h=400",
-      tags: ["JavaScript", "API", "CSS"],
-      category: "web",
+      tags: ["Python", "UI Design", "API Integration"],
+      category: "other",
       demoUrl: "#",
       sourceUrl: "#",
     },
     {
       id: 6,
-      title: "Personal Blog Theme",
-      description: "A minimalist blog theme designed for content creators focusing on readability.",
+      title: "Apartment Management System",
+      description: "A system designed to manage apartment complexes, including tenant management, maintenance requests, and billing.",
       image: "https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&w=600&h=400",
-      tags: ["WordPress", "CSS", "Responsive"],
-      category: "design",
+      tags: ["Database Design", "User Interface", "Backend", "Frontend"],
+      category: "other",
       demoUrl: "#",
       sourceUrl: "#",
     },
+    {
+      id: 7,
+      title: "Hospital Management System",
+      description: "A comprehensive system for managing hospital operations, including patient records, appointments, and billing.",
+      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=600&h=400",
+      tags: ["Database Design", "User Interface", "Backend", "Frontend"],
+      category: "other",
+      demoUrl: "#",
+      sourceUrl: "#",
+    },
+    {
+      id: 8,
+      title: "Cancer Prediction using ML",
+      description: "A research project on predicting cancer using machine learning techniques based on patient data and medical records.",
+      image: "https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=600&h=400",
+      tags: ["Machine Learning", "Data Analysis", "Healthcare", "Research"],
+      category: "ai",
+      demoUrl: "#",
+      sourceUrl: "#",
+    }
   ];
 
   const filteredProjects = category === "all" 
@@ -93,7 +113,7 @@ const ProjectsSection = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">My Projects</h2>
           <div className="h-1 w-20 bg-primary mx-auto mb-6"></div>
           <p className="text-lg text-muted-foreground">
-            Here are some of the projects I've worked on during my internship and personal time.
+            Here are some of the projects I've worked on during my academic studies and internships.
           </p>
         </div>
 
@@ -117,11 +137,19 @@ const ProjectsSection = () => {
             </button>
             <button
               className={`px-3 py-1.5 text-sm font-medium rounded-sm transition-all ${
-                category === "design" ? "bg-primary text-primary-foreground" : "hover:text-foreground"
+                category === "ai" ? "bg-primary text-primary-foreground" : "hover:text-foreground"
               }`}
-              onClick={() => setCategory("design")}
+              onClick={() => setCategory("ai")}
             >
-              UI/UX Design
+              AI & ML Projects
+            </button>
+            <button
+              className={`px-3 py-1.5 text-sm font-medium rounded-sm transition-all ${
+                category === "other" ? "bg-primary text-primary-foreground" : "hover:text-foreground"
+              }`}
+              onClick={() => setCategory("other")}
+            >
+              Other Projects
             </button>
           </div>
         </div>

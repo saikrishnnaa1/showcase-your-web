@@ -5,25 +5,27 @@ import { Card, CardContent } from "@/components/ui/card";
 interface Skill {
   name: string;
   percentage: number;
-  category: "frontend" | "tools" | "soft";
+  category: "languages" | "tools" | "frameworks" | "soft";
 }
 
 const SkillsSection = () => {
-  const [filter, setFilter] = useState<"all" | "frontend" | "tools" | "soft">("all");
+  const [filter, setFilter] = useState<"all" | "languages" | "tools" | "frameworks" | "soft">("all");
 
   const skills: Skill[] = [
-    { name: "HTML", percentage: 90, category: "frontend" },
-    { name: "CSS", percentage: 85, category: "frontend" },
-    { name: "JavaScript", percentage: 80, category: "frontend" },
-    { name: "React", percentage: 75, category: "frontend" },
-    { name: "Responsive Design", percentage: 88, category: "frontend" },
-    { name: "Tailwind CSS", percentage: 82, category: "frontend" },
-    { name: "GitHub", percentage: 78, category: "tools" },
-    { name: "VS Code", percentage: 85, category: "tools" },
-    { name: "Figma", percentage: 70, category: "tools" },
+    { name: "C/C++", percentage: 85, category: "languages" },
+    { name: "Python", percentage: 80, category: "languages" },
+    { name: "Javascript", percentage: 75, category: "languages" },
+    { name: "HTML+CSS", percentage: 85, category: "languages" },
+    { name: "ReactJs", percentage: 70, category: "frameworks" },
+    { name: "Node.js", percentage: 65, category: "frameworks" },
+    { name: "Git & GitHub", percentage: 80, category: "tools" },
+    { name: "MongoDB", percentage: 70, category: "tools" },
+    { name: "Firebase", percentage: 75, category: "tools" },
+    { name: "MySQL", percentage: 70, category: "tools" },
     { name: "Problem Solving", percentage: 85, category: "soft" },
-    { name: "Communication", percentage: 90, category: "soft" },
-    { name: "Time Management", percentage: 80, category: "soft" },
+    { name: "Self-learning", percentage: 90, category: "soft" },
+    { name: "Presentation", percentage: 80, category: "soft" },
+    { name: "Adaptability", percentage: 85, category: "soft" },
   ];
 
   const filteredSkills = filter === "all" 
@@ -37,7 +39,7 @@ const SkillsSection = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">My Skills</h2>
           <div className="h-1 w-20 bg-primary mx-auto mb-6"></div>
           <p className="text-lg text-muted-foreground">
-            Through my internship and personal projects, I've developed a diverse set of technical and soft skills.
+            Through my education and internships, I've developed a diverse set of technical and soft skills.
           </p>
         </div>
 
@@ -53,11 +55,19 @@ const SkillsSection = () => {
             </button>
             <button
               className={`px-3 py-1.5 text-sm font-medium rounded-sm transition-all ${
-                filter === "frontend" ? "bg-primary text-primary-foreground" : "hover:text-foreground"
+                filter === "languages" ? "bg-primary text-primary-foreground" : "hover:text-foreground"
               }`}
-              onClick={() => setFilter("frontend")}
+              onClick={() => setFilter("languages")}
             >
-              Frontend
+              Languages
+            </button>
+            <button
+              className={`px-3 py-1.5 text-sm font-medium rounded-sm transition-all ${
+                filter === "frameworks" ? "bg-primary text-primary-foreground" : "hover:text-foreground"
+              }`}
+              onClick={() => setFilter("frameworks")}
+            >
+              Frameworks
             </button>
             <button
               className={`px-3 py-1.5 text-sm font-medium rounded-sm transition-all ${

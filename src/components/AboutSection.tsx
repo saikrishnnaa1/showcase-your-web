@@ -11,31 +11,21 @@ const AboutSection = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">About Me</h2>
           <div className="h-1 w-20 bg-primary mx-auto mb-6"></div>
           <p className="text-lg text-muted-foreground">
-            My journey as a front-end developer began with a passion for creating
-            visually appealing and user-friendly interfaces.
+            I'm a Computer Science student specializing in AI & ML, with hands-on experience in web development and data science.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 gap-12 items-center">
           <div className="space-y-6">
-            <h3 className="text-2xl font-bold">My Internship Experience</h3>
+            <h3 className="text-2xl font-bold">My Education & Experience</h3>
             <p>
-              Throughout my front-end development internship, I gained valuable hands-on
-              experience bridging theoretical knowledge with practical application. I
-              designed and deployed a real-world portfolio project showcasing my skills,
-              achievements, and projects in a structured and visually engaging manner.
+              I'm currently pursuing my Bachelor of Technology in Computer Science and Engineering (AI & ML) at Vardhaman College of Engineering, Shamshabad with a CGPA of 8.1.
             </p>
             <p>
-              I worked extensively with HTML, CSS, and JavaScript, implementing responsive
-              design principles to ensure cross-device compatibility. This experience
-              allowed me to explore best practices in UI/UX design, resulting in a clean,
-              professional layout that is both interactive and informative.
+              I've completed internships at YBI Foundation as a Data Science Intern, where I analyzed large datasets and developed ML models for customer behavior prediction. I also worked with AWS services like EC2, S3, and RDS.
             </p>
             <p>
-              The project also gave me insight into version control using GitHub, browser
-              testing, and iterative refinement based on usability feedback. I learned the
-              importance of semantic coding, organized project structuring, and optimizing
-              performance for web deployment.
+              At Vault of Codes, I worked as a Web Development Intern and developed a Resume Builder using HTML, CSS, and JavaScript. Additionally, I created a portfolio website showcasing my projects and skills.
             </p>
             <div className="pt-4">
               <Button size="lg">Download CV</Button>
@@ -48,9 +38,9 @@ const AboutSection = () => {
                 <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
                   <Code className="h-6 w-6 text-primary" />
                 </div>
-                <h4 className="text-xl font-semibold mb-2">Clean Code</h4>
+                <h4 className="text-xl font-semibold mb-2">Development</h4>
                 <p className="text-muted-foreground">
-                  Writing semantic, maintainable, and efficient code with modern best practices.
+                  Skilled in web development using HTML, CSS, JavaScript, and ReactJS.
                 </p>
               </CardContent>
             </Card>
@@ -60,9 +50,9 @@ const AboutSection = () => {
                 <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
                   <Layout className="h-6 w-6 text-primary" />
                 </div>
-                <h4 className="text-xl font-semibold mb-2">Responsive Design</h4>
+                <h4 className="text-xl font-semibold mb-2">Data Science</h4>
                 <p className="text-muted-foreground">
-                  Creating websites that work seamlessly across all devices and screen sizes.
+                  Experience in data analysis, machine learning, and deploying ML models.
                 </p>
               </CardContent>
             </Card>
@@ -74,7 +64,7 @@ const AboutSection = () => {
                 </div>
                 <h4 className="text-xl font-semibold mb-2">Problem Solving</h4>
                 <p className="text-muted-foreground">
-                  Finding creative solutions to complex development challenges.
+                  Strong analytical skills with expertise in algorithms and data structures.
                 </p>
               </CardContent>
             </Card>
@@ -84,9 +74,9 @@ const AboutSection = () => {
                 <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-4">
                   <Users className="h-6 w-6 text-primary" />
                 </div>
-                <h4 className="text-xl font-semibold mb-2">Collaboration</h4>
+                <h4 className="text-xl font-semibold mb-2">Leadership</h4>
                 <p className="text-muted-foreground">
-                  Working effectively in teams using version control and best practices.
+                  Led teams of peers and mentored students to ensure successful performance.
                 </p>
               </CardContent>
             </Card>

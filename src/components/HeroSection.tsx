@@ -13,15 +13,15 @@ const HeroSection = () => {
           <div className="mb-6 animate-fade-in">
             <p className="text-primary font-medium mb-2">Hello, my name is</p>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4">
-              John Doe
+              S Saikrishna
             </h1>
             <h2 className="text-2xl md:text-3xl lg:text-4xl text-muted-foreground font-semibold mb-6">
-              Front-End Web Developer
+              Computer Science Student (AI & ML)
             </h2>
             <p className="text-lg text-muted-foreground max-w-xl">
-              I design and build exceptional digital experiences. During my recent internship, 
-              I focused on creating responsive websites with clean user interfaces and 
-              optimal user experiences.
+              I'm a Computer Science student with a focus on AI & ML. My experience includes 
+              web development and data science internships where I developed practical projects 
+              like a resume builder and portfolio website.
             </p>
           </div>
 
@@ -60,7 +60,7 @@ const HeroSection = () => {
               <span className="sr-only">LinkedIn</span>
             </a>
             <a 
-              href="mailto:contact@example.com"
+              href="mailto:sunkarisaikrishna22cm@student.vardhaman.org"
               className="hover:text-primary transition-colors"
             >
               <Mail className="h-5 w-5" />
