@@ -1,5 +1,5 @@
 
-import { ArrowRight, GitHub, Linkedin, Mail } from "lucide-react";
+import { ArrowRight, Github, Linkedin, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const HeroSection = () => {
@@ -47,7 +47,7 @@ const HeroSection = () => {
               rel="noopener noreferrer"
               className="hover:text-primary transition-colors"
             >
-              <GitHub className="h-5 w-5" />
+              <Github className="h-5 w-5" />
               <span className="sr-only">GitHub</span>
             </a>
             <a 
